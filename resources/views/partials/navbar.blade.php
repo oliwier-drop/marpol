@@ -1,24 +1,17 @@
-
-<nav class="bg-neutral-primary fixed w-full z-20 top-0 start-0 border-b border-default">
+<nav class="bg-white opacity-90 fixed w-full z-20 top-0 start-0">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <!-- Logo na środku -->
-        <div class="flex-1 flex justify-center order-2">
+        <!-- Logo z lewej -->
+        <div class="flex items-center">
             <a href="{{ url('/') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="{{ Storage::url('images/logo.png') }}" class="h-8" alt="Logo" />
+                <img src="{{ asset('assets/images/logo.png') }}" class="h-20 w-auto" alt="Logo" />
             </a>
         </div>
 
-        <!-- Linki z lewej strony -->
-        <div class="flex items-center order-1 flex-1">
+        <!-- Linki z prawej strony -->
+        <div class="flex items-center md:order-2">
             <div class="hidden md:flex md:space-x-8 rtl:space-x-reverse">
                 <a href="#" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">O nas</a>
                 <a href="#" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Usługi</a>
-            </div>
-        </div>
-
-        <!-- Linki z prawej strony -->
-        <div class="flex items-center order-3 flex-1 justify-end">
-            <div class="hidden md:flex md:space-x-8 rtl:space-x-reverse">
                 <a href="#" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Cennik</a>
                 <a href="#" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Kontakt</a>
             </div>
