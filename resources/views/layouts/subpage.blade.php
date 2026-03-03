@@ -26,11 +26,8 @@
     <body>
         <!-- Nawigacja - wspólna dla wszystkich stron -->
         @include('partials.navbar')
-        @hasSection ('header')
-            <header>
-                @yield('header')
-            </header>
-        @endif
+
+        @include('partials.hero')
 
         <main>
             @yield('content')

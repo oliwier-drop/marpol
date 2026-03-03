@@ -9,3 +9,11 @@ Route::get('/', function () {
 Route::get('/o-nas', function () {
     return view('about');
 });
+
+Route::get('/produkty', function () {
+    return view('products');
+});
+
+Route::get('/kontakt', function () {
+    return view('contacts');
+});
