@@ -30,7 +30,7 @@
                                 <path d="M4 8l8 5 8-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M20 8v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2"/>
                             </svg>
-                            <a href="mailto:biuro@marpol-opakowania.pl" class="hover:text-white underline-offset-4 hover:underline">biuro@marpol-opakowania.pl</a>
+                            <a href="mailto:kontakt@marpol-opakowania.pl" class="hover:text-white underline-offset-4 hover:underline">kontakt@marpol-opakowania.pl</a>
                         </li>
                         <li class="flex items-center gap-2">
                             <svg class="h-5 w-5 flex-shrink-0 text-[var(--accent-color)]" viewBox="0 0 24 24" fill="none" aria-hidden="true">
