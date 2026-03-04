@@ -11,9 +11,48 @@ Trochę o naszej historii oraz naszych wartościach.
 @section('content')
 
 <section id="values" class="bg-gray-100">
-    <div class="container mx-auto px-4 py-12">
-        <h2 class="text-2xl font-bold text-center mb-8">Nasze wartości</h2>
-        <p class="text-base font-normal text-center mb-8">W Marpol dbamy o jakość i estetykę opakowań, oferując szeroki wybór materiałów, kolorów i wzorów. Łączymy innowacyjne, wydajne procesy z ochroną środowiska naturalnego.</p>
+    <div class="max-w-screen-xl mx-auto px-4 py-16">
+        <div class="max-w-3xl mx-auto text-center mb-12">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 mb-4">Nasze wartości</h2>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-3">
+            <!-- Rozwój -->
+            <div class="flex flex-col items-center rounded-2xl bg-white/80 shadow-sm ring-1 ring-gray-200/60 p-8 text-center">
+                <div class="mb-5 inline-flex h-20 w-20 items-center justify-center rounded-full bg-blue-500/10">
+                    <img src="{{ asset('assets/images/chart.png') }}" alt="Rozwój" class="h-16 w-16 object-contain rounded-full">
+                </div>
+                <h3 class="mb-3 text-xl font-semibold text-gray-900">Rozwój</h3>
+                <p class="text-sm text-gray-600">
+                    Inwestujemy w nowoczesne technologie i rozwój kompetencji, aby stale podnosić jakość naszych opakowań
+                    oraz szybko reagować na potrzeby rynku.
+                </p>
+            </div>
+
+            <!-- Trwałe rozwiązania -->
+            <div class="flex flex-col items-center rounded-2xl bg-white/80 shadow-sm ring-1 ring-gray-200/60 p-8 text-center">
+                <div class="mb-5 inline-flex h-20 w-20 items-center justify-center rounded-full bg-yellow-500/10">
+                    <img src="{{ asset('assets/images/box-icon.png') }}" alt="Trwałe rozwiązania" class="h-16 w-16 object-contain">
+                </div>
+                <h3 class="mb-3 text-xl font-semibold text-gray-900">Trwałe rozwiązania</h3>
+                <p class="text-sm text-gray-600">
+                    Tworzymy opakowania odporne na uszkodzenia i dostosowane do intensywnego użytkowania, aby jak najlepiej
+                    chronić zawartość podczas transportu i magazynowania.
+                </p>
+            </div>
+
+            <!-- Ekologia -->
+            <div class="flex flex-col items-center rounded-2xl bg-white/80 shadow-sm ring-1 ring-gray-200/60 p-8 text-center">
+                <div class="mb-5 inline-flex h-20 w-20 items-center justify-center rounded-full bg-emerald-500/10">
+                    <img src="{{ asset('assets/images/eco-icon.png') }}" alt="Ekologia" class="h-16 w-16 object-contain">
+                </div>
+                <h3 class="mb-3 text-xl font-semibold text-gray-900">Ekologia</h3>
+                <p class="text-sm text-gray-600">
+                    Stawiamy na materiały przyjazne środowisku i zoptymalizowane procesy produkcji, aby ograniczać ilość odpadów
+                    i minimalizować ślad węglowy naszych opakowań.
+                </p>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -21,31 +60,31 @@ Trochę o naszej historii oraz naszych wartościach.
     <div class="container mx-auto px-4 py-12">
         <h2 class="text-2xl font-bold text-center mb-8">Nasza historia</h2>
             <ol class="relative border-s border-default">                  
-                <li class="mb-10 ms-4">
+                <li class="mb-20 ms-4">
                     <div class="absolute w-3 h-3 bg-neutral-quaternary rounded-full mt-1.5 -start-1.5 border border-buffer"></div>
                     <time class="text-sm font-normal leading-none text-body">Rok 2005</time>
                     <h3 class="text-lg font-semibold text-heading my-2">Założenie firmy</h3>
                     <p class="mb-4 text-base font-normal text-body">Firma została założona w 2005 roku przez Edwarda Pocztarka. Początkowo firma produkowała wytłaczanki z papieru, ale wkrótce zaczęła produkować również opakowania z papieru <br>w różnych kształtach i rozmiarach.</p>
                 </li>
-                <li class="mb-10 ms-4">
+                <li class="mb-20 ms-4">
                     <div class="absolute w-3 h-3 bg-neutral-quaternary rounded-full mt-1.5 -start-1.5 border border-buffer"></div>
                     <time class="text-sm font-normal leading-none text-body">Rok 2010</time>
                     <h3 class="text-lg font-semibold text-heading my-2">Rozwój firmy</h3>
                     <p class="text-base font-normal text-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
                 </li>
-                <li class="mb-10 ms-4">
+                <li class="mb-20 ms-4">
                     <div class="absolute w-3 h-3 bg-neutral-quaternary rounded-full mt-1.5 -start-1.5 border border-buffer"></div>
                     <time class="mb-1 text-sm font-normal leading-none text-body">Rok 2015</time>
                     <h3 class="text-lg font-semibold text-heading my-2">Świadomy rozwój</h3>
                     <p class="text-base font-normal text-body">Zaczęliśmy współpracę z najlepszymi producentami materiałów i dostawcami, aby zapewnić jakość oraz być bardziej ekologicznym.</p>
                 </li>
-                <li class="mb-10 ms-4">
+                <li class="mb-20 ms-4">
                     <div class="absolute w-3 h-3 bg-neutral-quaternary rounded-full mt-1.5 -start-1.5 border border-buffer"></div>
                     <time class="mb-1 text-sm font-normal leading-none text-body">Rok 2020</time>
                     <h3 class="text-lg font-semibold text-heading my-2">Nowe produkty</h3>
                     <p class="text-base font-normal text-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
                 </li>
-                <li class="mb-10 ms-4">
+                <li class="mb-20 ms-4">
                     <div class="absolute w-3 h-3 bg-neutral-quaternary rounded-full mt-1.5 -start-1.5 border border-buffer"></div>
                     <time class="mb-1 text-sm font-normal leading-none text-body">Obecnie</time>
                     <h3 class="text-lg font-semibold text-heading my-2">Lokalny lider</h3>
@@ -59,7 +98,14 @@ Trochę o naszej historii oraz naszych wartościach.
     <div class="container mx-auto px-4 py-12">
         <h2 class="text-2xl font-bold text-center mb-8">Wspieramy region</h2>
         <p class="text-base font-normal text-center mb-8">Wspieramy Słupecki klub piłkarski oraz akademię młodych piłkarzy. Wierzymy w sport i jego edukacyjne znaczenie dla rozwoju młodych ludzi oraz lokalnej społeczności.</p>
-        <img src="{{ asset('assets/images/skp-akademia.jpg') }}" alt="Skp-Akademia" class="w-1/2 mx-auto rounded-lg shadow-lg">
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <img class="h-64 w-full rounded-base object-cover" src="{{ asset('assets/images/skp-akademia.jpg') }}" alt="">
+            <img class="h-64 w-full rounded-base object-cover" src="{{ asset('assets/images/skp-mecz2.jpg') }}" alt="">
+            <img class="h-64 w-full rounded-base object-cover" src="{{ asset('assets/images/skp-mecz.jpg') }}" alt="">
+            <img class="h-64 w-full rounded-base object-cover" src="{{ asset('assets/images/skp-mistrz.jpg') }}" alt="">
+        </div>
+
     </div>
 </section>
 @endsection

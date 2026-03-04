@@ -19,6 +19,8 @@
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="icon" href="/favicon.ico" />
 
+        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
 
         <!-- Styles / Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])

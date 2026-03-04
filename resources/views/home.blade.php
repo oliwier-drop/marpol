@@ -25,7 +25,7 @@
                 <a href="/kontakt" class="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105">
                     Skontaktuj się
                 </a>
-                <a href="/oferta" class="hover:bg-black text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                <a href="/produkty" class="hover:bg-black text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
                     Nasza oferta
                 </a>
             </div>
@@ -43,10 +43,22 @@
 @endsection
 
 @section('content')
-    <section id="about" class="bg-gray-100">
-        <div class="container mx-auto px-4 py-12">
-            <h2 class="text-2xl font-bold text-center mb-8">O nas</h2>
-            <p class="text-base font-normal text-center mb-8">W Marpol dbamy o jakość i estetykę opakowań, oferując szeroki wybór materiałów, kolorów i wzorów. Łączymy innowacyjne, wydajne procesy z ochroną środowiska naturalnego.</p>
+    <section id="about" class="bg-gray-100 pt-8">
+        <div class="container mx-auto px-4 py-12 flex justify-center">
+            <figure class="max-w-screen-md text-center">
+                <blockquote>
+                    <svg class="w-9 h-9 text-heading mb-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11V8a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1Zm0 0v2a4 4 0 0 1-4 4H5m14-6V8a1 1 0 0 0-1-1h-3a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1Zm0 0v2a4 4 0 0 1-4 4h-1"/></svg>
+                    <p class="text-2xl font-semibold text-heading tracking-tight">"Wierzę że opakowania to nie tylko środek transportu i magazynowania, ale także środek komunikacji i wizerunku Twojej firmy."</p>
+                </blockquote>
+                <figcaption class="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse">
+                    
+                    <div class="flex items-center divide-x rtl:divide-x-reverse divide-default">
+                        <cite class="pe-3 font-medium text-heading">Edward Pocztarek</cite>
+                        <cite class="ps-3 text-sm text-body">Właściciel Marpol</cite>
+                    </div>
+                </figcaption>
+            </figure>
+
         </div>
     </section>
 
