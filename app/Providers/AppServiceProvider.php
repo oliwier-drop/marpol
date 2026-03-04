@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +20,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        View::composer('layouts.subpage', function ($view) {
+            $path = request()->path();
+            if (str_starts_with($path, 'produkty/') && $path !== 'produkty') {
+                $view->with('breadcrumb_parent', 'Produkty');
+                $view->with('breadcrumb_parent_url', url('/produkty'));
+            }
+        });
     }
 }

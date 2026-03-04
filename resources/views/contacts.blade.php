@@ -48,6 +48,7 @@
             <div class="flex flex-col">
                 <h2 class="mb-4 text-2xl font-bold text-gray-900">Formularz kontaktowy</h2>
                 <form
+                    id="contact-form"
                     method="POST"
                     action="{{ route('contact.submit') }}"
                     class="flex-1 space-y-6 bg-white rounded-2xl shadow-sm ring-1 ring-gray-200/70 p-6"
@@ -154,4 +155,62 @@
     </div>
 </section>
     
+@push('scripts')
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+
+    const statusBox = document.createElement('div');
+    statusBox.className = 'mb-6 hidden rounded-base px-4 py-3 text-sm';
+    form.parentElement.prepend(statusBox);
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        statusBox.classList.add('hidden');
+        statusBox.textContent = '';
+
+        const url = form.action;
+        const tokenMeta = document.querySelector('meta[name="csrf-token"]');
+        const token = tokenMeta ? tokenMeta.content : '';
+        const formData = new FormData(form);
+
+        try {
+            const res = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'X-CSRF-TOKEN': token,
+                    'Accept': 'application/json',
+                },
+                body: formData,
+            });
+
+            if (res.ok) {
+                let data = {};
+                try { data = await res.json(); } catch (err) {}
+
+                form.reset();
+                statusBox.className = 'mb-6 rounded-base bg-emerald-50 px-4 py-3 text-sm text-emerald-800';
+                statusBox.textContent = data.message ?? 'Dziękujemy, wiadomość została wysłana.';
+                statusBox.classList.remove('hidden');
+            } else if (res.status === 422) {
+                const data = await res.json();
+                const firstError = Object.values(data.errors ?? {})[0]?.[0] ?? 'Wystąpił błąd walidacji.';
+                statusBox.className = 'mb-6 rounded-base bg-red-50 px-4 py-3 text-sm text-red-800';
+                statusBox.textContent = firstError;
+                statusBox.classList.remove('hidden');
+            } else {
+                throw new Error('Błąd serwera');
+            }
+        } catch (err) {
+            statusBox.className = 'mb-6 rounded-base bg-red-50 px-4 py-3 text-sm text-red-800';
+            statusBox.textContent = 'Nie udało się wysłać wiadomości. Spróbuj ponownie za chwilę.';
+            statusBox.classList.remove('hidden');
+        }
+    });
+});
+</script>
+@endpush
+
 @endsection

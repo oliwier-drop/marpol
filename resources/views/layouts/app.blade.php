@@ -23,7 +23,7 @@
         <!-- Styles / Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body>
+    <body class="bg-gray-100">
         <!-- Nawigacja - wspólna dla wszystkich stron -->
         @include('partials.navbar')
         @hasSection ('header')

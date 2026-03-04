@@ -43,7 +43,7 @@
 @endsection
 
 @section('content')
-    <section id="about" class="bg-gray-100 pt-8">
+    <section id="quote" class="py-12" data-aos="fade-up">
         <div class="container mx-auto px-4 py-12 flex justify-center">
             <figure class="max-w-screen-md text-center">
                 <blockquote>
@@ -62,14 +62,93 @@
         </div>
     </section>
 
-    <section id="products" class="bg-gray-100">
+    <section id="clients" class="py-12" data-aos="fade-up">
         <div class="container mx-auto px-4 py-12">
-            <h2 class="text-2xl font-bold text-center mb-8">Produkty</h2>
-            <p class="text-base font-normal text-center mb-8">W Marpol dbamy o jakość i estetykę opakowań, oferując szeroki wybór materiałów, kolorów i wzorów. Łączymy innowacyjne, wydajne procesy z ochroną środowiska naturalnego.</p>
+            <div class="grid gap-10 md:grid-cols-2 items-center">
+                <div class="space-y-4 md:space-y-6 max-w-xl">
+                    <h2 class="text-2xl md:text-3xl font-bold">Zaufani klienci</h2>
+                    <p class="text-base md:text-lg text-gray-700">
+                        Od lat dostarczamy opakowania dla firm z różnych branż, dbając o powtarzalną jakość,
+                        terminowość dostaw oraz dopasowanie rozwiązań do ich specyficznych potrzeb.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-2 gap-6 md:gap-8 justify-items-center">
+                    
+                    <a href="https://hellermanntyton.pl" target="_blank" rel="noopener noreferrer" data-aos="flip-up" data-aos-delay="100">
+                        <img src="{{ asset('assets/images/ht_logo.png') }}" alt="HellermannTyton"
+                             class="h-18 md:h-24 w-auto object-contain grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition-all">
+                    </a>
+                    <a href="http://ceglewski.com.pl/" target="_blank" rel="noopener noreferrer" data-aos="flip-up" data-aos-delay="200">
+                        <img src="{{ asset('assets/images/ceglewski_logo.png') }}" alt="Meble Ceglewski"
+                             class="h-18 md:h-24 w-auto object-contain grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition-all">
+                    </a>
+                    <a href="https://smu.com.pl" target="_blank" rel="noopener noreferrer" data-aos="flip-up" data-aos-delay="300">
+                        <img src="{{ asset('assets/images/smu_logo.png') }}" alt="Mleczarnia Strzałkowo"
+                             class="h-18 md:h-24 w-auto object-contain grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition-all">
+                    </a>
+                    <a href="https://intermeble.pl" target="_blank" rel="noopener noreferrer" data-aos="flip-up" data-aos-delay="400">
+                        <img src="{{ asset('assets/images/inter_logo.png') }}" alt="Intermeble"
+                             class="h-18 md:h-24 w-auto object-contain grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition-all">
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="ecology" class="bg-gray-100 h-[50vh]">
+    <section id="products" class="py-12" data-aos="fade-up">
+        <div class="container mx-auto px-4 py-12">
+            <h2 class="text-2xl font-bold text-center mb-8">Produkty</h2>
+            <div class="grid gap-4 sm:gap-6 md:grid-cols-4">
+                <article class="bg-white rounded-xl shadow-sm ring-1 ring-gray-200/70 overflow-hidden flex flex-col" data-aos="flip-up" data-aos-delay="100">
+                    <a href="/produkty/kartony-klapowe" class="block aspect-[4/3] overflow-hidden bg-gray-200">
+                        <img src="{{ asset('assets/images/kartony-klapowe.png') }}" alt="Kartony klapowe" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </a>
+                    <div class="p-4 flex flex-col flex-1">
+                        <h3 class="text-base font-semibold text-gray-900 mb-2">Kartony klapowe</h3>
+                        <a href="/produkty/kartony-klapowe" class="mt-auto inline-flex items-center justify-center rounded-lg bg-black px-3 py-2 text-xs font-medium text-white hover:bg-black/80 transition-colors">
+                            Dowiedz się więcej
+                        </a>
+                    </div>
+                </article>
+                <article class="bg-white rounded-xl shadow-sm ring-1 ring-gray-200/70 overflow-hidden flex flex-col" data-aos="flip-up" data-aos-delay="200">
+                    <a href="/produkty/kartony-fasonowe" class="block aspect-[4/3] overflow-hidden bg-gray-200">
+                        <img src="{{ asset('assets/images/kartony-fasonowe.png') }}" alt="Kartony fasonowe" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </a>
+                    <div class="p-4 flex flex-col flex-1">
+                        <h3 class="text-base font-semibold text-gray-900 mb-2">Kartony fasonowe</h3>
+                        <a href="/produkty/kartony-fasonowe" class="mt-auto inline-flex items-center justify-center rounded-lg bg-black px-3 py-2 text-xs font-medium text-white hover:bg-black/80 transition-colors">
+                            Dowiedz się więcej
+                        </a>
+                    </div>
+                </article>
+                <article class="bg-white rounded-xl shadow-sm ring-1 ring-gray-200/70 overflow-hidden flex flex-col" data-aos="flip-up" data-aos-delay="300">
+                    <a href="/produkty/tektury" class="block aspect-[4/3] overflow-hidden bg-gray-200">
+                        <img src="{{ asset('assets/images/tektury.png') }}" alt="Tektury" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </a>
+                    <div class="p-4 flex flex-col flex-1">
+                        <h3 class="text-base font-semibold text-gray-900 mb-2">Tektury</h3>
+                        <a href="/produkty/tektury" class="mt-auto inline-flex items-center justify-center rounded-lg bg-black px-3 py-2 text-xs font-medium text-white hover:bg-black/80 transition-colors">
+                            Dowiedz się więcej
+                        </a>
+                    </div>
+                </article>
+                <article class="bg-white rounded-xl shadow-sm ring-1 ring-gray-200/70 overflow-hidden flex flex-col" data-aos="flip-up" data-aos-delay="400">
+                    <a href="/produkty/wypelniacze" class="block aspect-[4/3] overflow-hidden bg-gray-200">
+                        <img src="{{ asset('assets/images/wypelniacze.png') }}" alt="Wypełniacze opakowań" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </a>
+                    <div class="p-4 flex flex-col flex-1">
+                        <h3 class="text-base font-semibold text-gray-900 mb-2">Wypełniacze opakowań</h3>
+                        <a href="/produkty/wypelniacze" class="mt-auto inline-flex items-center justify-center rounded-lg bg-black px-3 py-2 text-xs font-medium text-white hover:bg-black/80 transition-colors">
+                            Dowiedz się więcej
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="ecology" class="h-[50vh] py-12" data-aos="fade-in">
         <div class="container mx-auto px-4 py-12">
             <div class="grid gap-10 md:grid-cols-2 items-center">
                 <div class="space-y-4 md:space-y-6 text-center md:text-right md:order-2">
@@ -84,7 +163,7 @@
                         <li>• dopasowanie opakowań do wymogów ekologicznych Twojej branży</li>
                     </ul>
                 </div>
-                <div class="flex justify-center md:order-1">
+                <div class="flex justify-center md:order-1" data-aos="flip-up" data-aos-delay="200">
                     <svg class="w-auto max-w-[16rem] h-40 text-gray-800 dark:text-white" aria-hidden="true" width="485" height="480" viewBox="0 0 485 480" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M64.5 120C45.7 147.6 36.3333 194.833 34 215C44.8333 225.667 67.5 237.5 71.5 199.5C75.5 161.5 68.5 130.667 64.5 120Z" fill="#d6e2fb"/>
                 <path d="M64.5 120C45.7 147.6 36.3333 194.833 34 215C44.8333 225.667 67.5 237.5 71.5 199.5C75.5 161.5 68.5 130.667 64.5 120Z" fill="url(#paint0_linear_344_2328)"/>

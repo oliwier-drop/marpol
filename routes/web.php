@@ -18,11 +18,14 @@ Route::get('/produkty', function () {
 Route::get('/produkty/kartony-klapowe', function () {
     return view('products.cartons');
 });
-Route::get('/produkty/tektury', function () {
-    return view('products.paper');
+Route::get('/produkty/kartony-fasonowe', function () {
+    return view('products.custom_cartons');
 });
-Route::get('/produkty/wytloczenia', function () {
-    return view('products.wrapping');
+Route::get('/produkty/tektury', function () {
+    return view('products.papers');
+});
+Route::get('/produkty/wypelniacze', function () {
+    return view('products.filling');
 });
 
 Route::get('/procesy', function () {

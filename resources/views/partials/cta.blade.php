@@ -1,4 +1,4 @@
-<section id="cta" class="bg-gray-100 py-16 h-[40vh]">
+<section id="cta" class="py-16 h-[40vh]" data-aos="fade-up">
     <div class="container mx-auto px-4">
         <div class="grid gap-10 md:grid-cols-2 items-center">
             <div class="text-center md:text-left space-y-6">
@@ -10,7 +10,7 @@
                     </a>
                 </div>
             </div>
-            <div class="flex justify-center">
+            <div class="flex justify-center" data-aos="flip-up" data-aos-delay="200">
                 <svg class="w-auto max-w-[16rem] h-40 text-gray-800 dark:text-white" aria-hidden="true" width="420" height="568" viewBox="0 0 420 568" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M420 210C420 325.98 325.98 420 210 420C94.0202 420 0 325.98 0 210C0 94.0202 94.0202 0 210 0C325.98 0 420 94.0202 420 210Z" fill="url(#paint0_linear_411_1559)"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M399.91 299.749C366.257 370.833 293.87 420 209.999 420C136.23 420 71.345 381.963 33.8867 324.432C57.2858 313.976 89.8328 305.109 122.499 311C124.597 311.378 126.668 311.754 128.714 312.124C186.191 322.54 224.613 329.503 297.999 301.5C328.754 289.765 366.007 292.119 399.91 299.749Z" fill="url(#paint1_linear_411_1559)"/>
