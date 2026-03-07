@@ -59,7 +59,7 @@
                 aria-label="Powered by CORPOTECH"
             >
                 <span class="mr-2 text-white/70">Projekt i realizacja: </span>
-                <img src="/assets/images/ct-white.png" alt="CORPOTECH" class="h-8 w-auto">
+                <img src="/assets/images/logos/ct-white-logo.png" alt="CORPOTECH" class="h-8 w-auto">
             </a>
         </div>
     </div>

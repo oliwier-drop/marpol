@@ -9,30 +9,62 @@
 @endsection
     
 @section('content')
-<section id="contact-details" class="bg-gray-100 pt-8">
+<section id="contact-details" class="py-12" data-aos="fade-up">
     <div class="container mx-auto px-4 py-12">
 
-        <h2 class="mb-4 text-2xl font-bold text-gray-900">Kontak do biura</h2>
-        <p class="text-gray-600">
-            <a href="mailto:biuro@marpol-opakowania.pl" class="hover:text-blue-600">biuro@marpol-opakowania.pl</a>
-        </p>
-        <p class="text-gray-600">
-            <a href="tel:+48600600600" class="hover:text-blue-600">+48 600 600 600</a>
-        </p>
+        <div class="grid gap-8 md:grid-cols-2">
+            <div class="flex flex-col items-center rounded-2xl bg-white/80 shadow-sm ring-1 ring-gray-200/60 p-8 text-center" data-aos="flip-up" data-aos-delay="100">
+                <div class="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-blue-500/10">
+                    <img src="{{ asset('assets/images/icons/company.png') }}" alt="Ikona biura" class="h-10 w-10 object-contain">
+                </div>
+                <h2 class="text-lg font-semibold text-gray-900 mb-2">Kontakt do biura</h2>
+                <p class="text-sm text-gray-600 mb-4">
+                    Biuro obsługi klienta – informacje ogólne i administracyjne.
+                </p>
+                <div class="space-y-2 text-sm text-gray-700">
+                    <p>
+                        <a href="mailto:kontakt@marpol-opakowania.pl" class="inline-flex items-center justify-center gap-2 hover:text-blue-600">
+                            <img src="{{ asset('assets/images/icons/mail.png') }}" alt="" class="h-4 w-4">
+                            <span>kontakt@marpol-opakowania.pl</span>
+                        </a>
+                    </p>
+                    <p>
+                        <a href="tel:+48600600600" class="inline-flex items-center justify-center gap-2 hover:text-blue-600">
+                            <img src="{{ asset('assets/images/icons/phone.png') }}" alt="" class="h-4 w-4">
+                            <span>+48 600 600 600</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
 
-
-
-        <h2 class="mb-4 text-2xl font-bold text-gray-900">Kontakt do działu sprzedaży</h2>
-        <p class="text-gray-600">
-            <a href="mailto:sprzedaz@marpol-opakowania.pl" class="hover:text-blue-600">sprzedaz@marpol-opakowania.pl</a>
-        </p>
-        <p class="text-gray-600">
-            <a href="tel:+48600600600" class="hover:text-blue-600">+48 600 600 600</a>
-        </p>
+            <div class="flex flex-col items-center rounded-2xl bg-white/80 shadow-sm ring-1 ring-gray-200/60 p-8 text-center" data-aos="flip-up" data-aos-delay="200">
+                <div class="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500/10">
+                    <img src="{{ asset('assets/images/icons/sales.png') }}" alt="Ikona działu sprzedaży" class="h-10 w-10 object-contain">
+                </div>
+                <h2 class="text-lg font-semibold text-gray-900 mb-2">Kontakt do działu sprzedaży</h2>
+                <p class="text-sm text-gray-600 mb-4">
+                    Zapytania ofertowe, wyceny opakowań oraz bieżąca obsługa zamówień.
+                </p>
+                <div class="space-y-2 text-sm text-gray-700">
+                    <p>
+                        <a href="mailto:sprzedaz@marpol-opakowania.pl" class="inline-flex items-center justify-center gap-2 hover:text-blue-600">
+                            <img src="{{ asset('assets/images/icons/mail.png') }}" alt="" class="h-4 w-4">
+                            <span>sprzedaz@marpol-opakowania.pl</span>
+                        </a>
+                    </p>
+                    <p>
+                        <a href="tel:+48600600600" class="inline-flex items-center justify-center gap-2 hover:text-blue-600">
+                            <img src="{{ asset('assets/images/icons/phone.png') }}" alt="" class="h-4 w-4">
+                            <span>+48 600 600 600</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
 
 </section>
 
-<section id="contact-form" class="bg-gray-100 pt-8">
+<section id="contact-form" class="py-12" data-aos="fade-up">
     <div class="container mx-auto px-4 py-12">
         
 
@@ -45,7 +77,7 @@
         <div class="grid gap-10 md:grid-cols-2 items-stretch">
 
             <!-- Lewa kolumna: nagłówek + formularz -->
-            <div class="flex flex-col">
+            <div class="flex flex-col" data-aos="flip-up" data-aos-delay="100">
                 <h2 class="mb-4 text-2xl font-bold text-gray-900">Formularz kontaktowy</h2>
                 <form
                     id="contact-form"
@@ -63,7 +95,7 @@
                         value="{{ old('name') }}"
                         required
                         class="block w-full rounded-base border border-default bg-gray-50 px-3 py-2 text-sm text-gray-900 focus:border-brand focus:ring-brand @error('name') border-red-500 focus:border-red-500 focus:ring-red-500 @enderror"
-                        placeholder="Twoje imię i nazwisko"
+                        placeholder="Jan Kowalski..."
                     >
                     @error('name')
                         <p class="mt-1 text-xs text-red-600">{{ $message }}</p>
@@ -79,7 +111,7 @@
                         value="{{ old('email') }}"
                         required
                         class="block w-full rounded-base border border-default bg-gray-50 px-3 py-2 text-sm text-gray-900 focus:border-brand focus:ring-brand @error('email') border-red-500 focus:border-red-500 focus:ring-red-500 @enderror"
-                        placeholder="twoj.email@example.com"
+                        placeholder="jan.kowalski@example.com..."
                     >
                     @error('email')
                         <p class="mt-1 text-xs text-red-600">{{ $message }}</p>
@@ -94,7 +126,7 @@
                         name="phone"
                         value="{{ old('phone') }}"
                         class="block w-full rounded-base border border-default bg-gray-50 px-3 py-2 text-sm text-gray-900 focus:border-brand focus:ring-brand @error('phone') border-red-500 focus:border-red-500 focus:ring-red-500 @enderror"
-                        placeholder="+48 123 456 789"
+                        placeholder="+48 123 456 789..."
                     >
                     @error('phone')
                         <p class="mt-1 text-xs text-red-600">{{ $message }}</p>
@@ -138,7 +170,7 @@
             </div>
 
             <!-- Prawa kolumna: nagłówek + mapa -->
-            <div class="flex flex-col">
+            <div class="flex flex-col" data-aos="flip-up" data-aos-delay="200">
                 <h2 class="mb-4 text-2xl font-bold text-gray-900">Nasza lokalizacja</h2>
                 <div class="flex-1 overflow-hidden rounded-2xl shadow-sm ring-1 ring-gray-200/70">
                     <iframe

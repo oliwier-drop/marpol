@@ -20,7 +20,7 @@ Trochę o naszej historii oraz naszych wartościach.
             <!-- Rozwój -->
             <div class="flex flex-col items-center rounded-2xl bg-white/80 shadow-sm ring-1 ring-gray-200/60 p-8 text-center" data-aos="flip-up" data-aos-delay="100">
                 <div class="mb-5 inline-flex h-20 w-20 items-center justify-center rounded-full bg-blue-500/10">
-                    <img src="{{ asset('assets/images/chart.png') }}" alt="Rozwój" class="h-16 w-16 object-contain rounded-full">
+                    <img src="{{ asset('assets/images/icons/chart.png') }}" alt="Rozwój" class="h-16 w-16 object-contain rounded-full">
                 </div>
                 <h3 class="mb-3 text-xl font-semibold text-gray-900">Rozwój</h3>
                 <p class="text-sm text-gray-600">
@@ -32,7 +32,7 @@ Trochę o naszej historii oraz naszych wartościach.
             <!-- Trwałe rozwiązania -->
             <div class="flex flex-col items-center rounded-2xl bg-white/80 shadow-sm ring-1 ring-gray-200/60 p-8 text-center" data-aos="flip-up" data-aos-delay="200">
                 <div class="mb-5 inline-flex h-20 w-20 items-center justify-center rounded-full bg-yellow-500/10">
-                    <img src="{{ asset('assets/images/delivery-box.png') }}" alt="Trwałe rozwiązania" class="h-16 w-16 object-contain">
+                    <img src="{{ asset('assets/images/icons/box.png') }}" alt="Trwałe rozwiązania" class="h-16 w-16 object-contain">
                 </div>
                 <h3 class="mb-3 text-xl font-semibold text-gray-900">Trwałe rozwiązania</h3>
                 <p class="text-sm text-gray-600">
@@ -44,7 +44,7 @@ Trochę o naszej historii oraz naszych wartościach.
             <!-- Ekologia -->
             <div class="flex flex-col items-center rounded-2xl bg-white/80 shadow-sm ring-1 ring-gray-200/60 p-8 text-center" data-aos="flip-up" data-aos-delay="300">
                 <div class="mb-5 inline-flex h-20 w-20 items-center justify-center rounded-full bg-emerald-500/10">
-                    <img src="{{ asset('assets/images/eco-icon.png') }}" alt="Ekologia" class="h-16 w-16 object-contain">
+                    <img src="{{ asset('assets/images/icons/eco.png') }}" alt="Ekologia" class="h-16 w-16 object-contain">
                 </div>
                 <h3 class="mb-3 text-xl font-semibold text-gray-900">Ekologia</h3>
                 <p class="text-sm text-gray-600">

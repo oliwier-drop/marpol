@@ -34,7 +34,7 @@
             </div>
             <div class="relative flex justify-center md:justify-end h-40 md:h-48">
                 <img
-                    src="{{ asset('assets/images/boxes.png') }}"
+                    src="{{ asset('assets/images/icons/boxes.png') }}"
                     alt="Box-Icon"
                     class="h-full md:h-full w-auto md:scale-200 transform"
                 >

@@ -28,8 +28,8 @@ Route::get('/produkty/wypelniacze', function () {
     return view('products.filling');
 });
 
-Route::get('/procesy', function () {
-    return view('processes');
+Route::get('/polityka-prywatnosci', function () {
+    return view('privacy');
 });
 Route::view('/kontakt', 'contacts')->name('contact.show');
 Route::post('/kontakt', [ContactController::class, 'submit'])->name('contact.submit');

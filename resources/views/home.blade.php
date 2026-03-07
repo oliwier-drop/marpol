@@ -76,19 +76,19 @@
                 <div class="grid grid-cols-2 sm:grid-cols-2 gap-6 md:gap-8 justify-items-center">
                     
                     <a href="https://hellermanntyton.pl" target="_blank" rel="noopener noreferrer" data-aos="flip-up" data-aos-delay="100">
-                        <img src="{{ asset('assets/images/ht_logo.png') }}" alt="HellermannTyton"
+                        <img src="{{ asset('assets/images/logos/ht-logo.png') }}" alt="HellermannTyton"
                              class="h-18 md:h-24 w-auto object-contain grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition-all">
                     </a>
                     <a href="http://ceglewski.com.pl/" target="_blank" rel="noopener noreferrer" data-aos="flip-up" data-aos-delay="200">
-                        <img src="{{ asset('assets/images/ceglewski_logo.png') }}" alt="Meble Ceglewski"
+                        <img src="{{ asset('assets/images/logos/ceglewski-logo.png') }}" alt="Meble Ceglewski"
                              class="h-18 md:h-24 w-auto object-contain grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition-all">
                     </a>
                     <a href="https://smu.com.pl" target="_blank" rel="noopener noreferrer" data-aos="flip-up" data-aos-delay="300">
-                        <img src="{{ asset('assets/images/smu_logo.png') }}" alt="Mleczarnia Strzałkowo"
+                        <img src="{{ asset('assets/images/logos/smu-logo.png') }}" alt="Mleczarnia Strzałkowo"
                              class="h-18 md:h-24 w-auto object-contain grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition-all">
                     </a>
                     <a href="https://intermeble.pl" target="_blank" rel="noopener noreferrer" data-aos="flip-up" data-aos-delay="400">
-                        <img src="{{ asset('assets/images/inter_logo.png') }}" alt="Intermeble"
+                        <img src="{{ asset('assets/images/logos/intermeble-logo.png') }}" alt="Intermeble"
                              class="h-18 md:h-24 w-auto object-contain grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition-all">
                     </a>
                 </div>
@@ -102,7 +102,7 @@
             <div class="grid gap-4 sm:gap-6 md:grid-cols-4">
                 <article class="bg-white rounded-xl shadow-sm ring-1 ring-gray-200/70 overflow-hidden flex flex-col" data-aos="flip-up" data-aos-delay="100">
                     <a href="/produkty/kartony-klapowe" class="block aspect-[4/3] overflow-hidden bg-gray-200">
-                        <img src="{{ asset('assets/images/kartony-klapowe.png') }}" alt="Kartony klapowe" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        <img src="{{ asset('assets/images/kartony-klapowe.png') }}" alt="Kartony klapowe" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300 bg-white">
                     </a>
                     <div class="p-4 flex flex-col flex-1">
                         <h3 class="text-base font-semibold text-gray-900 mb-2">Kartony klapowe</h3>
@@ -113,7 +113,7 @@
                 </article>
                 <article class="bg-white rounded-xl shadow-sm ring-1 ring-gray-200/70 overflow-hidden flex flex-col" data-aos="flip-up" data-aos-delay="200">
                     <a href="/produkty/kartony-fasonowe" class="block aspect-[4/3] overflow-hidden bg-gray-200">
-                        <img src="{{ asset('assets/images/kartony-fasonowe.png') }}" alt="Kartony fasonowe" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        <img src="{{ asset('assets/images/kartony-fasonowe.png') }}" alt="Kartony fasonowe" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300 bg-white">
                     </a>
                     <div class="p-4 flex flex-col flex-1">
                         <h3 class="text-base font-semibold text-gray-900 mb-2">Kartony fasonowe</h3>
@@ -124,7 +124,7 @@
                 </article>
                 <article class="bg-white rounded-xl shadow-sm ring-1 ring-gray-200/70 overflow-hidden flex flex-col" data-aos="flip-up" data-aos-delay="300">
                     <a href="/produkty/tektury" class="block aspect-[4/3] overflow-hidden bg-gray-200">
-                        <img src="{{ asset('assets/images/tektury.png') }}" alt="Tektury" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        <img src="{{ asset('assets/images/tektury.png') }}" alt="Tektury" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300 bg-white">
                     </a>
                     <div class="p-4 flex flex-col flex-1">
                         <h3 class="text-base font-semibold text-gray-900 mb-2">Tektury</h3>
@@ -135,7 +135,7 @@
                 </article>
                 <article class="bg-white rounded-xl shadow-sm ring-1 ring-gray-200/70 overflow-hidden flex flex-col" data-aos="flip-up" data-aos-delay="400">
                     <a href="/produkty/wypelniacze" class="block aspect-[4/3] overflow-hidden bg-gray-200">
-                        <img src="{{ asset('assets/images/wypelniacze.png') }}" alt="Wypełniacze opakowań" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        <img src="{{ asset('assets/images/wypelniacze.png') }}" alt="Wypełniacze opakowań" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300 bg-white">
                     </a>
                     <div class="p-4 flex flex-col flex-1">
                         <h3 class="text-base font-semibold text-gray-900 mb-2">Wypełniacze opakowań</h3>

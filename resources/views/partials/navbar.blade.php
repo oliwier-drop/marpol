@@ -3,7 +3,7 @@
         <!-- Logo z lewej -->
         <div class="flex items-center">
             <a href="{{ url('/') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="{{ asset('assets/images/logo.png') }}" class="h-20 w-auto" alt="Logo" />
+                <img src="{{ asset('assets/images/logos/marpol-logo.png') }}" class="h-20 w-auto" alt="Logo" />
             </a>
         </div>
 
@@ -12,7 +12,6 @@
             <div class="hidden md:flex md:space-x-8 rtl:space-x-reverse">
                 <a href="/o-nas" class="block py-2 px-3 text-lg text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">O nas</a>
                 <a href="/produkty" class="block py-2 px-3 text-lg text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Produkty</a>
-                <a href="/procesy" class="block py-2 px-3 text-lg text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Procesy</a>
                 <a href="/kontakt" class="block py-2 px-3 text-lg text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Kontakt</a>
             </div>
         </div>
