@@ -36,3 +36,42 @@ body {
     position: relative;
     z-index: 1;
 }
+
+.cookie-toggle-track {
+    position: relative;
+    width: 44px;
+    height: 24px;
+    border-radius: 9999px;
+    background-color: #e5e7eb; /* gray-200 */
+    transition: background-color 0.2s ease;
+}
+
+.cookie-toggle-track::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 9999px;
+    background-color: #ffffff;
+    border: 1px solid #d1d5db; /* gray-300 */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+#cookie-analytics-toggle:focus-visible + .cookie-toggle-track,
+#cookie-marketing-toggle:focus-visible + .cookie-toggle-track {
+    outline: 2px solid rgba(0, 0, 0, 0.4);
+    outline-offset: 2px;
+}
+
+#cookie-analytics-toggle:checked + .cookie-toggle-track,
+#cookie-marketing-toggle:checked + .cookie-toggle-track {
+    background-color: #000000;
+}
+
+#cookie-analytics-toggle:checked + .cookie-toggle-track::before,
+#cookie-marketing-toggle:checked + .cookie-toggle-track::before {
+    transform: translateX(20px);
+}

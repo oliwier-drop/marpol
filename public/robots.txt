@@ -1,2 +1,12 @@
 User-agent: *
-Disallow:
+Disallow: /admin
+Disallow: /login
+Disallow: /register
+Disallow: /panel
+Disallow: /cart
+Disallow: /checkout
+Disallow: /404
+Disallow: /405
+Disallow: /errors/
+
+Sitemap: https://marpolopakowania.pl/sitemap.xml

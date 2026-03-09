@@ -2,6 +2,18 @@
 
 @section('title', '')
 
+@section('meta_description')
+Opakowania na każdą miarę
+@endsection
+
+@section('meta_keywords')
+    opakowania, kartony, tektury, wypełniacze, marpol
+@endsection
+
+@section('meta_robots')
+    index, follow
+@endsection
+
 @section('header')
     <section id="hero-video">
         {{-- Tło video --}}
@@ -148,7 +160,7 @@
         </div>
     </section>
 
-    <section id="ecology" class="h-[50vh] py-12" data-aos="fade-in">
+    <section id="ecology" class="py-12" data-aos="fade-in">
         <div class="container mx-auto px-4 py-12">
             <div class="grid gap-10 md:grid-cols-2 items-center">
                 <div class="space-y-4 md:space-y-6 text-center md:text-right md:order-2">

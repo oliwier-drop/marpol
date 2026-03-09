@@ -27,15 +27,12 @@
 
     <!-- Menu mobilne -->
     <div class="hidden w-full md:hidden" id="navbar-default">
-        <ul class="font-medium flex flex-col p-4 mt-4 rounded-base bg-neutral-secondary-soft border border-gray-200">
+        <ul class="font-medium flex flex-col p-4 mt-4 rounded-base bg-neutral-secondary-soft">
             <li>
                 <a href="/o-nas" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary">O nas</a>
             </li>
             <li>
                 <a href="/produkty" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary">Produkty</a>
-            </li>
-            <li>
-                <a href="/procesy" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary">Procesy</a>
             </li>
             <li>
                 <a href="/kontakt" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary">Kontakt</a>

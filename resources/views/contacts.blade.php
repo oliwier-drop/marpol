@@ -7,13 +7,25 @@
 @section('description')
     Skontaktuj się z nami, jeśli masz pytania lub potrzebujesz pomocy.
 @endsection
+
+@section('meta_description')
+    Skontaktuj się z nami, jeśli masz pytania lub potrzebujesz pomocy.
+@endsection
+
+@section('meta_keywords')
+    kontakt, marpol, opakowania, kartony, tektury, wypełniacze
+@endsection
+
+@section('meta_robots')
+    index, follow
+@endsection
     
 @section('content')
 <section id="contact-details" class="py-12" data-aos="fade-up">
     <div class="container mx-auto px-4 py-12">
 
         <div class="grid gap-8 md:grid-cols-2">
-            <div class="flex flex-col items-center rounded-2xl bg-white/80 shadow-sm ring-1 ring-gray-200/60 p-8 text-center" data-aos="flip-up" data-aos-delay="100">
+            <div class="flex flex-col items-center rounded-2xl bg-white/80 shadow-sm ring-1 ring-gray-200/60 p-5 text-center sm:p-6 lg:p-8" data-aos="flip-up" data-aos-delay="100">
                 <div class="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-blue-500/10">
                     <img src="{{ asset('assets/images/icons/company.png') }}" alt="Ikona biura" class="h-10 w-10 object-contain">
                 </div>
@@ -37,7 +49,7 @@
                 </div>
             </div>
 
-            <div class="flex flex-col items-center rounded-2xl bg-white/80 shadow-sm ring-1 ring-gray-200/60 p-8 text-center" data-aos="flip-up" data-aos-delay="200">
+            <div class="flex flex-col items-center rounded-2xl bg-white/80 shadow-sm ring-1 ring-gray-200/60 p-5 text-center sm:p-6 lg:p-8" data-aos="flip-up" data-aos-delay="200">
                 <div class="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500/10">
                     <img src="{{ asset('assets/images/icons/sales.png') }}" alt="Ikona działu sprzedaży" class="h-10 w-10 object-contain">
                 </div>
@@ -65,7 +77,7 @@
 </section>
 
 <section id="contact-form" class="py-12" data-aos="fade-up">
-    <div class="container mx-auto px-4 py-12">
+    <div class="container mx-auto px-4">
         
 
         @if (session('status'))
@@ -74,16 +86,16 @@
             </div>
         @endif
 
-        <div class="grid gap-10 md:grid-cols-2 items-stretch">
+        <div class="grid gap-8 md:grid-cols-2 items-stretch">
 
-            <!-- Lewa kolumna: nagłówek + formularz -->
-            <div class="flex flex-col" data-aos="flip-up" data-aos-delay="100">
+            <!-- Lewa kolumna: karta jak w contact-details -->
+            <div class="flex flex-col items-center rounded-2xl bg-white/80 shadow-sm ring-1 ring-gray-200/60 p-5 text-center sm:p-6 lg:p-8" data-aos="flip-up" data-aos-delay="100">
                 <h2 class="mb-4 text-2xl font-bold text-gray-900">Formularz kontaktowy</h2>
                 <form
                     id="contact-form"
                     method="POST"
                     action="{{ route('contact.submit') }}"
-                    class="flex-1 space-y-6 bg-white rounded-2xl shadow-sm ring-1 ring-gray-200/70 p-6"
+                    class="w-full space-y-6 text-left"
                 >
                 @csrf
                 <div>
@@ -154,6 +166,7 @@
                         class="cf-turnstile"
                         data-sitekey="{{ config('services.turnstile.site_key') }}"
                         data-theme="light"
+                        data-size="flexible"
                     ></div>
                     @error('turnstile')
                         <p class="mt-2 text-xs text-red-600">{{ $message }}</p>
@@ -169,13 +182,13 @@
                 </form>
             </div>
 
-            <!-- Prawa kolumna: nagłówek + mapa -->
-            <div class="flex flex-col" data-aos="flip-up" data-aos-delay="200">
+            <!-- Prawa kolumna: karta jak w contact-details -->
+            <div class="flex flex-col items-center rounded-2xl bg-white/80 shadow-sm ring-1 ring-gray-200/60 p-5 text-center sm:p-6 lg:p-8" data-aos="flip-up" data-aos-delay="200">
                 <h2 class="mb-4 text-2xl font-bold text-gray-900">Nasza lokalizacja</h2>
-                <div class="flex-1 overflow-hidden rounded-2xl shadow-sm ring-1 ring-gray-200/70">
+                <div class="w-full overflow-hidden rounded-2xl ring-1 ring-gray-200/70 aspect-[4/3]">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d940.2259436466503!2d17.89537671450972!3d52.32245965808636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4704c62f00c76a51%3A0x3c840facd8e82928!2sWhot!5e0!3m2!1spl!2spl!4v1772618989471!5m2!1spl!2spl"
-                        class="h-full w-full"
+                        class="w-full h-full"
                         style="border:0;"
                         allowfullscreen=""
                         loading="lazy"

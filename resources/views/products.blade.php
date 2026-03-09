@@ -7,6 +7,18 @@
 @section('description')
     Sprawdź nasze produkty i wykonaj zamówienie.
 @endsection
+
+@section('meta_description')
+    Sprawdź nasze produkty i wykonaj zamówienie.
+@endsection
+
+@section('meta_keywords')
+    produkty, marpol, opakowania, kartony, tektury, wypełniacze
+@endsection
+
+@section('meta_robots')
+    index, follow
+@endsection
     
 @section('content')
 <section class="bg-gray-100 py-12">

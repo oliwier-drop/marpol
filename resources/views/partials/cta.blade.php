@@ -1,4 +1,4 @@
-<section id="cta" class="py-16 h-[40vh]" data-aos="fade-up">
+<section id="cta" class="py-16" data-aos="fade-up">
     <div class="container mx-auto px-4">
         <div class="grid gap-10 md:grid-cols-2 items-center">
             <div class="text-center md:text-left space-y-6">

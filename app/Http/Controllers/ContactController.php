@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactMessage;
 
 class ContactController extends Controller
 {
@@ -29,7 +31,18 @@ class ContactController extends Controller
                 ->withInput();
         }
 
-        // TODO: wysłanie maila lub zapis zgłoszenia
+        $toAddress = env('CONTACT_MAIL_ADDRESS');
+
+        if ($toAddress) {
+            Mail::to($toAddress)->send(
+                new ContactMessage(
+                    $validated['name'],
+                    $validated['email'],
+                    $validated['phone'] ?? null,
+                    $validated['message'],
+                )
+            );
+        }
 
         return back()->with('status', 'Dziękujemy za wiadomość. Skontaktujemy się z Tobą tak szybko, jak to możliwe.');
     }

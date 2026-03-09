@@ -31,5 +31,6 @@ Route::get('/produkty/wypelniacze', function () {
 Route::get('/polityka-prywatnosci', function () {
     return view('privacy');
 });
+
 Route::view('/kontakt', 'contacts')->name('contact.show');
 Route::post('/kontakt', [ContactController::class, 'submit'])->name('contact.submit');

@@ -7,6 +7,18 @@
 @section('description')
 Trochę o naszej historii oraz naszych wartościach.
 @endsection
+
+@section('meta_description')
+    Trochę o naszej historii oraz naszych wartościach.
+@endsection
+
+@section('meta_keywords')
+    o nas, marpol, opakowania, kartony, tektury, wypełniacze
+@endsection
+
+@section('meta_robots')
+    index, follow
+@endsection
     
 @section('content')
 
@@ -60,35 +72,35 @@ Trochę o naszej historii oraz naszych wartościach.
     <div class="container mx-auto px-4 py-12">
         <h2 class="text-3xl font-bold text-center mb-8">Nasza historia</h2>
             <ol class="relative border-s border-default">                  
-                <li class="mb-20 ms-4" data-aos="flip-up" data-aos-delay="100">
+                <li class="mb-20 ms-4 ps-8" data-aos="flip-up" data-aos-delay="100">
                     <div class="absolute w-3 h-3 bg-neutral-quaternary rounded-full mt-1.5 -start-1.5 border border-buffer"></div>
                     <time class="text-sm font-normal leading-none text-body">Rok 2005</time>
                     <h3 class="text-lg font-semibold text-heading my-2">Założenie firmy</h3>
                     <p class="mb-4 text-base font-normal text-body">Firma została założona w 2005 roku przez Edwarda Pocztarka. Początkowo firma produkowała wytłaczanki z papieru, ale wkrótce zaczęła produkować również opakowania z papieru <br>w różnych kształtach i rozmiarach.</p>
                 </li>
-                <li class="mb-20 ms-4" data-aos="flip-up" data-aos-delay="200">
+                <li class="mb-20 ms-4 ps-8" data-aos="flip-up" data-aos-delay="200">
                     <div class="absolute w-3 h-3 bg-neutral-quaternary rounded-full mt-1.5 -start-1.5 border border-buffer"></div>
                     <time class="text-sm font-normal leading-none text-body">Rok 2010</time>
                     <h3 class="text-lg font-semibold text-heading my-2">Rozwój firmy</h3>
-                    <p class="text-base font-normal text-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                    <p class="text-base font-normal text-body">Zakup nowego sprzętu do produkcji opakowań, który pozwalał na produkcję opakowań w większych ilościach i w krótszym czasie.</p>
                 </li>
-                <li class="mb-20 ms-4" data-aos="flip-up" data-aos-delay="300">
+                <li class="mb-20 ms-4 ps-8" data-aos="flip-up" data-aos-delay="300">
                     <div class="absolute w-3 h-3 bg-neutral-quaternary rounded-full mt-1.5 -start-1.5 border border-buffer"></div>
                     <time class="mb-1 text-sm font-normal leading-none text-body">Rok 2015</time>
                     <h3 class="text-lg font-semibold text-heading my-2">Świadomy rozwój</h3>
                     <p class="text-base font-normal text-body">Zaczęliśmy współpracę z najlepszymi producentami materiałów i dostawcami, aby zapewnić jakość oraz być bardziej ekologicznym.</p>
                 </li>
-                <li class="mb-20 ms-4" data-aos="flip-up" data-aos-delay="400">
+                <li class="mb-20 ms-4 ps-8" data-aos="flip-up" data-aos-delay="400">
                     <div class="absolute w-3 h-3 bg-neutral-quaternary rounded-full mt-1.5 -start-1.5 border border-buffer"></div>
                     <time class="mb-1 text-sm font-normal leading-none text-body">Rok 2020</time>
                     <h3 class="text-lg font-semibold text-heading my-2">Nowe produkty</h3>
-                    <p class="text-base font-normal text-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                    <p class="text-base font-normal text-body">Rozpoczeliśmy produkcję nowych opakowań w kształcie pudełek, które są bardziej estetyczne i przyjazne dla środowiska.</p>
                 </li>
-                <li class="mb-20 ms-4" data-aos="flip-up" data-aos-delay="500">
+                <li class="mb-20 ms-4 ps-8" data-aos="flip-up" data-aos-delay="500">
                     <div class="absolute w-3 h-3 bg-neutral-quaternary rounded-full mt-1.5 -start-1.5 border border-buffer"></div>
                     <time class="mb-1 text-sm font-normal leading-none text-body">Obecnie</time>
                     <h3 class="text-lg font-semibold text-heading my-2">Lokalny lider</h3>
-                    <p class="text-base font-normal text-body">Firma jest lokalnym liderem w produkcji opakowań. Produkuje opakowania dla firm z Konina i okolic.</p>
+                    <p class="text-base font-normal text-body">Firma jest lokalnym liderem w produkcji opakowań. Zaopatrujemy firmy w całym powiecie Słupecki i okolicach.</p>
                 </li>
             </ol>
     </div>
