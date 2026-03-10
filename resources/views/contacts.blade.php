@@ -9,7 +9,7 @@
 @endsection
 
 @section('meta_description')
-    Skontaktuj się z nami, jeśli masz pytania lub potrzebujesz pomocy.
+    Skontaktuj się z nami, jeśli masz pytania lub potrzebujesz pomocy. Formularz kontaktowy i dane kontaktowe firmy Marpol, producenta ekologicznych opakowań tekturowych i kartonów klapowych oraz fasonowych ze Słupcy.
 @endsection
 
 @section('meta_keywords')
@@ -25,7 +25,7 @@
     <div class="container mx-auto px-4 py-12">
 
         <div class="grid gap-8 md:grid-cols-2">
-            <div class="flex flex-col items-center rounded-2xl bg-white/80 shadow-sm ring-1 ring-gray-200/60 p-5 text-center sm:p-6 lg:p-8" data-aos="flip-up" data-aos-delay="100">
+            <div class="flex w-full flex-col items-center rounded-2xl bg-white/80 shadow-sm ring-1 ring-gray-200/60 p-5 text-center sm:p-6 lg:p-8" data-aos="flip-up" data-aos-delay="100">
                 <div class="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-blue-500/10">
                     <img src="{{ asset('assets/images/icons/company.png') }}" alt="Ikona biura" class="h-10 w-10 object-contain">
                 </div>
@@ -43,13 +43,13 @@
                     <p>
                         <a href="tel:+48600600600" class="inline-flex items-center justify-center gap-2 hover:text-blue-600">
                             <img src="{{ asset('assets/images/icons/phone.png') }}" alt="" class="h-4 w-4">
-                            <span>+48 600 600 600</span>
+                            <span>(63) 213 19 18</span>
                         </a>
                     </p>
                 </div>
             </div>
 
-            <div class="flex flex-col items-center rounded-2xl bg-white/80 shadow-sm ring-1 ring-gray-200/60 p-5 text-center sm:p-6 lg:p-8" data-aos="flip-up" data-aos-delay="200">
+            <div class="flex w-full flex-col items-center rounded-2xl bg-white/80 shadow-sm ring-1 ring-gray-200/60 p-5 text-center sm:p-6 lg:p-8" data-aos="flip-up" data-aos-delay="200">
                 <div class="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500/10">
                     <img src="{{ asset('assets/images/icons/sales.png') }}" alt="Ikona działu sprzedaży" class="h-10 w-10 object-contain">
                 </div>
@@ -67,7 +67,7 @@
                     <p>
                         <a href="tel:+48600600600" class="inline-flex items-center justify-center gap-2 hover:text-blue-600">
                             <img src="{{ asset('assets/images/icons/phone.png') }}" alt="" class="h-4 w-4">
-                            <span>+48 600 600 600</span>
+                            <span>(63) 213 19 18</span>
                         </a>
                     </p>
                 </div>
@@ -76,7 +76,7 @@
 
 </section>
 
-<section id="contact-form" class="py-12" data-aos="fade-up">
+<section id="contact-section" class="py-12" data-aos="fade-up">
     <div class="container mx-auto px-4">
         
 
@@ -89,13 +89,13 @@
         <div class="grid gap-8 md:grid-cols-2 items-stretch">
 
             <!-- Lewa kolumna: karta jak w contact-details -->
-            <div class="flex flex-col items-center rounded-2xl bg-white/80 shadow-sm ring-1 ring-gray-200/60 p-5 text-center sm:p-6 lg:p-8" data-aos="flip-up" data-aos-delay="100">
+            <div class="flex w-full min-w-0 flex-col items-center overflow-hidden rounded-2xl bg-white/80 shadow-sm ring-1 ring-gray-200/60 p-5 text-center sm:p-6 lg:p-8" data-aos="flip-up" data-aos-delay="100">
                 <h2 class="mb-4 text-2xl font-bold text-gray-900">Formularz kontaktowy</h2>
                 <form
                     id="contact-form"
                     method="POST"
                     action="{{ route('contact.submit') }}"
-                    class="w-full space-y-6 text-left"
+                    class="w-full min-w-0 space-y-6 text-left"
                 >
                 @csrf
                 <div>
@@ -161,9 +161,9 @@
                 </div>
 
                 {{-- Cloudflare Turnstile --}}
-                <div class="pt-2 @error('turnstile') text-red-600 @enderror">
+                <div class="w-full min-w-0 overflow-hidden pt-2 @error('turnstile') text-red-600 @enderror">
                     <div
-                        class="cf-turnstile"
+                        class="cf-turnstile max-w-full"
                         data-sitekey="{{ config('services.turnstile.site_key') }}"
                         data-theme="light"
                         data-size="flexible"
@@ -183,9 +183,9 @@
             </div>
 
             <!-- Prawa kolumna: karta jak w contact-details -->
-            <div class="flex flex-col items-center rounded-2xl bg-white/80 shadow-sm ring-1 ring-gray-200/60 p-5 text-center sm:p-6 lg:p-8" data-aos="flip-up" data-aos-delay="200">
+            <div class="flex w-full min-w-0 flex-col items-center overflow-hidden rounded-2xl bg-white/80 shadow-sm ring-1 ring-gray-200/60 p-5 text-center sm:p-6 lg:p-8" data-aos="flip-up" data-aos-delay="200">
                 <h2 class="mb-4 text-2xl font-bold text-gray-900">Nasza lokalizacja</h2>
-                <div class="w-full overflow-hidden rounded-2xl ring-1 ring-gray-200/70 aspect-[4/3]">
+                <div class="aspect-[4/3] w-full max-w-full overflow-hidden rounded-2xl ring-1 ring-gray-200/70">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d940.2259436466503!2d17.89537671450972!3d52.32245965808636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4704c62f00c76a51%3A0x3c840facd8e82928!2sWhot!5e0!3m2!1spl!2spl!4v1772618989471!5m2!1spl!2spl"
                         class="w-full h-full"

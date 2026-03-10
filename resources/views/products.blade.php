@@ -9,7 +9,7 @@
 @endsection
 
 @section('meta_description')
-    Sprawdź nasze produkty i wykonaj zamówienie.
+    Sprawdź nasze produkty i wykonaj zamówienie. Opakowania tekturowe, kartonowe i fasonowe produkowane przez Marpol, producenta ekologicznych opakowań tekturowych i kartonów klapowych oraz fasonowych ze Słupcy.
 @endsection
 
 @section('meta_keywords')
@@ -49,15 +49,15 @@
         </div>
 
         {{-- Kartony fasonowe --}}
-        <div class="flex flex-row-reverse items-center gap-8 md:gap-12">
-            <div class="md:w-1/2 flex justify-center" data-aos="fade-left" data-aos-delay="100">
+        <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <div class="order-1 md:order-2 md:w-1/2 flex justify-center" data-aos="fade-left" data-aos-delay="100">
                 <img
                     src="{{ asset('assets/images/kartony-fasonowe.png') }}"
                     alt="Kartony fasonowe"
                     class="max-w-md w-full object-contain"
                 >
             </div>
-            <div class="md:w-1/2 space-y-4" data-aos="fade-up">
+            <div class="order-2 md:order-1 md:w-1/2 space-y-4" data-aos="fade-up">
                 <h2 class="text-2xl font-bold text-gray-900">Kartony fasonowe</h2>
                 <p class="text-sm md:text-base text-gray-700">
                     Opakowania fasonowe dopasowane do kształtu produktu – estetyczne, wygodne w składaniu
@@ -97,15 +97,15 @@
         </div>
 
         {{-- Wypełniacze --}}
-        <div class="flex flex-row-reverse items-center gap-8 md:gap-12">
-            <div class="md:w-1/2 flex justify-center" data-aos="fade-left" data-aos-delay="100">
+        <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <div class="order-1 md:order-2 md:w-1/2 flex justify-center" data-aos="fade-left" data-aos-delay="100">
                 <img
                     src="{{ asset('assets/images/wypelniacze.png') }}"
                     alt="Wypełniacze opakowań"
                     class="max-w-md w-full object-contain"
                 >
             </div>
-            <div class="md:w-1/2 space-y-4" data-aos="fade-up">
+            <div class="order-2 md:order-1 md:w-1/2 space-y-4" data-aos="fade-up">
                 <h2 class="text-2xl font-bold text-gray-900">Wypełniacze opakowań</h2>
                 <p class="text-sm md:text-base text-gray-700">
                     Papierowe i kartonowe wypełniacze, które stabilizują produkt w kartonie i chronią go

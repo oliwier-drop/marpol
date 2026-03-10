@@ -1,4 +1,4 @@
-<div id="cookie-consent-banner" class="fixed bottom-[1vh] left-[1vw] z-50 max-w-sm bg-white border border-gray-200 rounded-lg shadow-lg p-4 text-sm text-gray-800 flex flex-col gap-3 hidden">
+<div id="cookie-consent-banner" class="fixed inset-x-4 bottom-4 z-50 mx-auto max-w-sm bg-white border border-gray-200 rounded-lg shadow-lg p-4 text-sm text-gray-800 flex flex-col gap-3 hidden sm:inset-auto sm:bottom-[1vh] sm:left-[1vw] sm:mx-0">
     <p class="font-semibold">
         Używamy plików cookie
     </p>
@@ -14,7 +14,7 @@
             Odrzuć
         </button>
         <button id="cookie-consent-settings" type="button" class="inline-flex items-center justify-center rounded-base bg-gray-200 px-4 py-2 text-xs font-medium text-gray-800 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400">
-            Zmień ustawienia
+            Ustawienia
         </button>
     </div>
 </div>

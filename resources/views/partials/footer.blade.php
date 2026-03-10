@@ -43,7 +43,7 @@
         </div>
 
         <!-- Footer Bottom -->
-        <div class="pt-6 pb-10 flex flex-col gap-4 md:flex-row md:items-center md:justify-between text-sm text-white/70">
+        <div class="pt-6 pb-10 flex flex-col items-center gap-4 text-center md:flex-row md:items-center md:justify-between md:text-left text-sm text-white/70">
             <p>&copy; {{ now()->year }} PPH Marpol Pocztarek Edward, Wszelkie prawa zastrzeżone</p>
 
             <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">

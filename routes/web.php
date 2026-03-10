@@ -32,5 +32,9 @@ Route::get('/polityka-prywatnosci', function () {
     return view('privacy');
 });
 
+Route::get('/regulamin', function () {
+    return view('statute');
+});
+
 Route::view('/kontakt', 'contacts')->name('contact.show');
 Route::post('/kontakt', [ContactController::class, 'submit'])->name('contact.submit');

@@ -9,7 +9,7 @@ Trochę o naszej historii oraz naszych wartościach.
 @endsection
 
 @section('meta_description')
-    Trochę o naszej historii oraz naszych wartościach.
+    Poznaj historię i wartości firmy Marpol, producenta ekologicznych opakowań tekturowych i kartonów klapowych oraz fasonowych ze Słupcy.
 @endsection
 
 @section('meta_keywords')
