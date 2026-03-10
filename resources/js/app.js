@@ -22,6 +22,42 @@ document.addEventListener('DOMContentLoaded', () => {
     const marketingToggle = document.getElementById('cookie-marketing-toggle');
     const preferencesTrigger = document.getElementById('cookie-preferences-trigger');
 
+    const gaMeta = document.querySelector('meta[name="ga-measurement-id"]');
+    const gtmMeta = document.querySelector('meta[name="gtm-id"]');
+    const GA_ID = gaMeta ? gaMeta.content : null;
+    const GTM_ID = gtmMeta ? gtmMeta.content : null;
+
+    let analyticsInitialized = false;
+
+    const loadScript = (src) => {
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = src;
+        document.head.appendChild(script);
+    };
+
+    const enableAnalytics = () => {
+        if (analyticsInitialized) return;
+        if (!GA_ID && !GTM_ID) return;
+
+        analyticsInitialized = true;
+
+        window.dataLayer = window.dataLayer || [];
+
+        if (GA_ID) {
+            function gtag(){window.dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', GA_ID);
+            loadScript(`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`);
+        }
+
+        if (GTM_ID) {
+            window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+            loadScript(`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`);
+        }
+    };
+
     if (!banner) return;
 
     const CONSENT_STATUS_KEY = 'cookieConsentStatus';
@@ -43,14 +79,17 @@ document.addEventListener('DOMContentLoaded', () => {
     syncTogglesFromStorage();
 
     const status = localStorage.getItem(CONSENT_STATUS_KEY);
+    const analyticsEnabledNow = localStorage.getItem(ANALYTICS_KEY) === 'true';
+
+    if (analyticsEnabledNow) {
+        enableAnalytics();
+    }
 
     if (status === 'accepted' || status === 'rejected' || status === 'custom') {
-        // Użytkownik już podjął decyzję – pokazujemy tylko ikonę ciasteczka
         if (preferencesTrigger) {
             preferencesTrigger.classList.remove('hidden');
         }
     } else {
-        // Brak decyzji – pokazujemy baner, ukrywamy ikonę
         banner.classList.remove('hidden');
         if (preferencesTrigger) {
             preferencesTrigger.classList.add('hidden');
@@ -86,6 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem(CONSENT_STATUS_KEY, 'accepted');
             localStorage.setItem(ANALYTICS_KEY, 'true');
             localStorage.setItem(MARKETING_KEY, 'true');
+            enableAnalytics();
             hideBanner();
         });
     }
@@ -119,11 +159,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (settingsSaveBtn) {
         settingsSaveBtn.addEventListener('click', () => {
+            const previousAnalyticsEnabled = localStorage.getItem(ANALYTICS_KEY) === 'true';
             const analyticsEnabled = analyticsToggle ? analyticsToggle.checked : false;
             const marketingEnabled = marketingToggle ? marketingToggle.checked : false;
+
             localStorage.setItem(CONSENT_STATUS_KEY, 'custom');
             localStorage.setItem(ANALYTICS_KEY, analyticsEnabled ? 'true' : 'false');
             localStorage.setItem(MARKETING_KEY, marketingEnabled ? 'true' : 'false');
+
+            if (analyticsEnabled && !previousAnalyticsEnabled) {
+                enableAnalytics();
+            }
+
             hideBanner();
             closeSettings();
         });

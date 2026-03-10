@@ -32,24 +32,20 @@
         <!-- Turnstile -->
         <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
-        <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-PDJHXGBQ');</script>
-        
-
+        @if (app()->environment('production'))
+            @if (env('GOOGLE_ANALYTICS_TAG'))
+                <meta name="ga-measurement-id" content="{{ env('GOOGLE_ANALYTICS_TAG') }}">
+            @endif
+            @if (env('GOOGLE_TAG_MANAGER_ID'))
+                <meta name="gtm-id" content="{{ env('GOOGLE_TAG_MANAGER_ID') }}">
+            @endif
+        @endif
 
         <!-- Styles / Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="bg-gray-100">
 
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDJHXGBQ"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        
         @include('partials.navbar')
         @hasSection ('header')
             <header>
