@@ -4,12 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>@hasSection('title')@yield('title') - @endif{{ config('app.name') }}</title>
+        <title>@yield('title', config('app.name'))</title>
         <meta name="description" content="@yield('meta_description')">
         <meta name="keywords" content="@yield('meta_keywords')">
         <meta name="robots" content="@yield('meta_robots')">
 
-        <meta property="og:title" content="@hasSection('title')@yield('title') - @endif{{ config('app.name') }}">
+        <meta property="og:title" content="@yield('title', config('app.name'))">
         <meta property="og:description" content="@yield('meta_description')">
         <meta property="og:type" content="website">
         <meta property="og:url" content="{{ url()->current() }}">
@@ -35,7 +35,7 @@
         <!-- Schema.org -->
         <script type="application/ld+json">
         {
-        "@context": "https://schema.org",
+        "@@context": "https://schema.org",
         "@type": "Organization",
         "name": "{{ config('app.name') }}",
         "url": "{{ url('/') }}",
@@ -58,7 +58,7 @@
     <body class="bg-gray-100">
 
         @include('partials.navbar')
-        @hasSection ('header')
+        @if (View::hasSection('header'))
             <header>
                 @yield('header')
             </header>
