@@ -25,18 +25,18 @@
         </ol>
         </nav>
 
-        <div class="mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-            <div class="space-y-2 md:space-y-3 max-w-2xl">
+        <div class="mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-8 min-w-0">
+            <div class="space-y-2 md:space-y-3 max-w-2xl min-w-0">
                 <h1 class="text-2xl md:text-3xl font-bold text-left">@yield('title')</h1>
                 <p class="text-sm md:text-base font-medium text-body-subtle">
                     @yield('description')
                 </p>
             </div>
-            <div class="relative flex justify-center md:justify-end h-40 md:h-48">
+            <div class="relative flex justify-center md:justify-end items-center h-48 md:h-64 min-w-0">
                 <img
                     src="{{ asset('assets/images/icons/boxes.png') }}"
                     alt="Box-Icon"
-                    class="h-full md:h-full w-auto md:scale-200 transform"
+                    class="max-h-full w-auto max-w-full object-contain"
                 >
             </div>
         </div>

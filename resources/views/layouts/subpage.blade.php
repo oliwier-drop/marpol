@@ -51,7 +51,7 @@
 
         @include('partials.hero')
 
-        <main>
+        <main class="overflow-hidden">
             @yield('content')
 
             @include('partials.cta')

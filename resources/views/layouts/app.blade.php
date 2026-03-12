@@ -53,7 +53,7 @@
             </header>
         @endif
 
-        <main>
+        <main class="overflow-hidden">
             @yield('content')
 
             @include('partials.cta')
