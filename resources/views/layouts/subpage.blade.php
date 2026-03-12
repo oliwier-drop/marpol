@@ -6,12 +6,12 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>@hasSection('title')@yield('title') - @endif{{ config('app.name') }}</title>
-        <meta name="description" content="@yield('meta_description', 'MARPOL – producent ekologicznych opakowań tekturowych i kartonów klapowych oraz fasonowych ze Słupcy. Opakowania na każdą miarę dla firm z różnych branż.')">
-        <meta name="keywords" content="@yield('meta_keywords', 'opakowania kartonowe, kartony klapowe, kartony fasonowe, producent opakowań, opakowania tekturowe Słupca, MARPOL')">
-        <meta name="robots" content="@yield('meta_robots', 'index,follow')">
+        <meta name="description" content="@yield('meta_description')">
+        <meta name="keywords" content="@yield('meta_keywords')">
+        <meta name="robots" content="@yield('meta_robots')">
 
         <meta property="og:title" content="@hasSection('title')@yield('title') - @endif{{ config('app.name') }}">
-        <meta property="og:description" content="@yield('meta_description', 'MARPOL – producent ekologicznych opakowań tekturowych i kartonów klapowych oraz fasonowych ze Słupcy. Opakowania na każdą miarę dla firm z różnych branż.')">
+        <meta property="og:description" content="@yield('meta_description')">
         <meta property="og:type" content="website">
         <meta property="og:url" content="{{ url()->current() }}">
         <meta property="og:site_name" content="{{ config('app.name') }}">

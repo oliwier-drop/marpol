@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>@hasSection('title')@yield('title') - @endif{{ config('app.name') }}</title>
-        <meta name="description" content="@yield('meta_description', 'MARPOL – producent ekologicznych opakowań tekturowych i kartonów klapowych oraz fasonowych ze Słupcy. Opakowania na każdą miarę dla firm z różnych branż.')">
-        <meta name="keywords" content="@yield('meta_keywords', 'opakowania kartonowe, kartony klapowe, kartony fasonowe, producent opakowań, opakowania tekturowe Słupca, MARPOL')">
-        <meta name="robots" content="@yield('meta_robots', 'index,follow')">
+        <meta name="description" content="@yield('meta_description')">
+        <meta name="keywords" content="@yield('meta_keywords')">
+        <meta name="robots" content="@yield('meta_robots')">
 
         <meta property="og:title" content="@hasSection('title')@yield('title') - @endif{{ config('app.name') }}">
         <meta property="og:description" content="@yield('meta_description')">
@@ -31,6 +31,17 @@
 
         <!-- Turnstile -->
         <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+        <!-- Schema.org -->
+        <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "{{ config('app.name') }}",
+        "url": "{{ url('/') }}",
+        "logo": "{{ asset('assets/images/logos/marpol-logo.png') }}"
+        }
+        </script>
 
         @if (app()->environment('production'))
             @if (env('GOOGLE_ANALYTICS_TAG'))
