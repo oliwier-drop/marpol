@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-@section('title', '')
-
 @section('meta_description')
 Opakowania na każdą miarę - Marpol, producent ekologicznych opakowań tekturowych i kartonów klapowych oraz fasonowych ze Słupcy.
 @endsection
